@@ -17,14 +17,14 @@ from keras.utils import np_utils
 #cnn model 
 model=Sequential()
 model.add(Convolution2D(32,(3,3),activation="relu",input_shape=(28,28,1)))
-model.add(Convolution2D(64,(3,3),activation="relu"))
-model.add(Dropout(0.25))
-model.add(MaxPooling2D(2,2))
+# model.add(Convolution2D(64,(3,3),activation="relu"))
+# model.add(Dropout(0.25))
+# model.add(MaxPooling2D(2,2))
 
-model.add(Convolution2D(32,(3,3),activation="relu"))
-model.add(Convolution2D(16,(3,3),activation="relu"))
+# model.add(Convolution2D(32,(3,3),activation="relu"))
+# model.add(Convolution2D(16,(3,3),activation="relu"))
 
-model.add(Flatten())
+# model.add(Flatten())
 model.add(Dense(10,activation="softmax"))#to predict output
 print(model.summary())
 
