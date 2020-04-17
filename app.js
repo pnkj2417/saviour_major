@@ -18,7 +18,7 @@ app.get('/home',function(req,res){
 })
 
 app.get('/',function(req,res){
-    res.send("hello")
+    res.send("hello0")
 })
 
 app.listen(port,function(){
