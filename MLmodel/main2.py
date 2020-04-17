@@ -5,14 +5,14 @@ from keras.layers import Input,Convolution2D,MaxPooling2D,Flatten,Dense,Dropout
 from keras.utils import np_utils
 
 
-(x_, y_), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
-#print("x_train shape:", x_train.shape, "y_train shape:", y_train.shape)
-X_train,Y_train=x_test,y_test
-X_train=X_train.reshape((-1,28,28,1))
-Y_train=np_utils.to_categorical(Y_train)
-print(X_train.shape,Y_train.shape)
+# (x_, y_), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
+# #print("x_train shape:", x_train.shape, "y_train shape:", y_train.shape)
+# X_train,Y_train=x_test,y_test
+# X_train=X_train.reshape((-1,28,28,1))
+# Y_train=np_utils.to_categorical(Y_train)
+# print(X_train.shape,Y_train.shape)
 
-x_=x_.reshape((-1,28,28,1))
+# x_=x_.reshape((-1,28,28,1))
 
 #cnn model 
 model=Sequential()

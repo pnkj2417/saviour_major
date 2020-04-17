@@ -11,7 +11,8 @@ var port= process.env.PORT || 8080
 app.get('/home',function(req,res){
     var p=spawn('python',["MLmodel/main2.py"])
     p.stdout.on('data',function(data){
-        res.send(data.toString)
+        console.log(data.toString())
+        res.send(data.toString())
     })
 
     
@@ -22,5 +23,5 @@ app.get('/',function(req,res){
 })
 
 app.listen(port,function(){
-    console.log("server started")
+    console.log("server started",port)
 })
