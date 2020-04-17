@@ -26,7 +26,7 @@ model.add(Convolution2D(32,(3,3),activation="relu",input_shape=(28,28,1)))
 
 # model.add(Flatten())
 model.add(Dense(10,activation="softmax"))#to predict output
-print(model.summary())
+print(type(model))
 
 #model.compile(loss="categorical_crossentropy",optimizer="adam",metrics=["accuracy"])
 #hist=model.fit(X_train,Y_train,epochs=1,shuffle=True,batch_size=256,validation_split=0.40)
