@@ -8,13 +8,17 @@ pyProcess.stdout.on('data',function(data){
 })
 var port= process.env.PORT || 8080
 
-app.get('/',function(req,res){
+app.get('/home',function(req,res){
     var p=spawn('python',["MLmodel/main2.py"])
     p.stdout.on('data',function(data){
         res.send(data.toString)
     })
 
     
+})
+
+app.get('/',function(req,res){
+    res.send("hello")
 })
 
 app.listen(port,function(){
