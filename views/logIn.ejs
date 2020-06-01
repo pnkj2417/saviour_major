@@ -1,0 +1,35 @@
+<%- include('partials/header',{id:id}); -%>
+<%if(msg==true){%>
+    <div id="flash" style="height: 60px;">
+        <div style="background-color: rgb(255, 102, 102);height: 100%;">
+        <p style="text-align: center;font-size: 32px;color:black;">Login Id or password is incorrect</p>
+        </div>
+    </div>
+ <%}%>   
+ <%if(msg==-1){%>
+    <div id="flash" style="height: 60px;">
+        <div style="background-color: rgb(255, 102, 102);height: 100%;">
+        <p style="text-align: center;font-size: 32px;color:black;">Your login limits have been exhausted, wait for an hour</p>
+        </div>
+    </div>
+ <%}%>   
+
+<div style=" width: 30% ;margin-left:32.5%; margin-top: 3%; background-color:rgb(96, 219, 207) ;">
+    <div  class="shadow p-3 mb-5 rounded" >
+        <form class="from-control row" method="POST">
+            <input type="text" class="form-control" style=" width: 41% ;margin-left:7% ;color:rgb(231, 236, 233); background-color:darkslategrey" value="Login Id" readonly>
+            <input type="text" name="id" class="form-control" style=" width: 42% ;margin-left:2.5% ;"required >
+    
+            <input type="text" class="form-control" style=" width: 41% ;margin-left:7% ; margin-top: 2%;color:rgb(231, 236, 233); background-color:darkslategrey" value="Password" readonly>
+            <input type="password" name="password" class="form-control" style=" width: 42% ;margin-left:2.5% ;margin-top: 2%;" required >
+
+            
+
+            <button type="submit" class="btn btn-success" style="margin-left: 40%; margin-top: 2%;">Log In</button>
+        </form>
+    </div>
+    </div>
+
+<%- include('partials/prefooter'); -%>  
+<script type="text/javascript" src="logIn.js"></script>
+<%- include('partials/footer'); -%>

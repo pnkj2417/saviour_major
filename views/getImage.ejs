@@ -1,0 +1,35 @@
+<%- include('partials/header',{id:id}); -%>
+<%if(emp==true){%>
+  <div id="flash" style="height: 60px;">
+      <div style="background-color: rgb(255, 102, 102);height: 100%;">
+      <p style="text-align: center;font-size: 32px;color:black;">Empty form</p>
+      </div>
+  </div>
+<%}%>  
+<div style="background-color:rgb(96, 219, 207);margin-top:2%; width: 45% ;margin-left:27%">
+<div  class="shadow p-3 mb-5 rounded" >
+  <form id="form" class="form-inline" method="post" enctype="multipart/form-data">
+    <div class="form-group" style="width: 45%;">
+      <label for="image" style="padding-bottom:1.5%; background-color:darkslategrey; color: white;" class="shadow p-2 mb-3 rounded" >Upload file to convert</label>
+      <input type="file" class="form-control-file" id="image" name="image" required >
+    </div>
+    
+    <div class="form-group" style="width: 35%;">
+      <select id="formType" name="formType" class="form-control"style="color:rgb(231, 236, 233); background-color:darkslategrey" required>
+        <option>Form type</option>
+      <% for(var i=0;i<collections.length;i++){ %>
+        <option><%= collections[i]%></option>
+        <% } %>
+      </select>
+    </div>
+      <button id="submit" type="submit" class="btn btn-primary" style="margin-left: 5%;">Submit</button> 
+  </form>
+  </div>  
+</div>
+ 
+<%- include('partials/prefooter'); -%>  
+<!-- for deploying model in browser -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+<script type="text/javascript" src="ml.js"></script>
+<script type="text/javascript" src="getImage.js"></script>
+<%- include('partials/footer'); -%> 

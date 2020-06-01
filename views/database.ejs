@@ -1,0 +1,24 @@
+<%- include('partials/header',{id:id}); -%>
+<div style="background-color:rgb(96, 219, 207);margin-top:2%; width: 30% ;margin-left:35% ;">
+    <div  class="shadow p-3 mb-5 rounded"  >
+        <label  >Select form type to fetch data</label>
+        <form method="POST" class="form-inline">
+            
+            <div class="form-group" style="width: 70%;">
+                <select name="formType" id="formType" class="form-control"style="color:rgb(231, 236, 233); background-color:darkslategrey; width:70% ; margin-left:2%" required>
+                    <option>Form type</option>
+                  <% for(var i=0;i<collections.length;i++){ %>
+                    <option><%= collections[i]%></option>
+                    <% } %>
+                  </select>
+            </div>
+            
+                <button id ="submit" type="submit" class="btn btn-primary">Submit</button>
+        
+        </form>
+    </div>
+</div>
+
+<%- include('partials/prefooter'); -%>  
+<script type="text/javascript" src="database.js"></script>
+<%- include('partials/footer'); -%>

@@ -1,0 +1,15 @@
+<%- include('partials/header',{id:id}); -%>
+<div style="margin-top:1%; width: 45% ;margin-left:30%; background-color:rgb(141, 226, 218)">
+    <div  class="shadow p-3 mb-5 rounded" >
+        <div class="form-group row" style="margin-left: 4%;"> 
+            <input type="text" class="form-control" style=" width: 89% ;margin-left:2% ;color:rgb(231, 236, 233); background-color:darkslategrey"
+             value="                        Your form has been created successfully" readonly>
+             
+                <button onclick="location.href='/makeForm'" type="button" class="btn btn-success" style="margin-left: 15%; margin-top: 2%;">Make another form</button>
+                <button onclick="location.href='/'" type="button" class="btn btn-secondary" style="margin-left: 15%; margin-top: 2%;  ">Go to home</button>
+              
+        </div>
+    </div>
+</div>
+<%- include('partials/prefooter'); -%>  
+<%- include('partials/footer'); -%>

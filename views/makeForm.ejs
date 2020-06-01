@@ -1,0 +1,38 @@
+<%- include('partials/header',{id:id}); -%>
+<div style="margin-top:2%; width: 46% ;margin-left:25% ;background-color:rgb(96, 219, 207)"> 
+    <div  class="shadow p-3 mb-5 rounded" >
+<form id="form" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="form-group row">
+            <label for="form-name" class="shadow p-2 mb-3 rounded" style="margin-left:10% ; background-color:darkslategrey; color: white;">Form Name</label>
+            
+            <input type="text" class="form-control" id="formName" style=" width: 60% ;margin-left:5%" required>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:2%; width: 40% ;margin-left:28%;background-color:rgb(141, 226, 218)">
+    <div  class="shadow p-3 mb-5 rounded" >
+        <div class="form-group row" style="margin-left: 2%;"> 
+            <input type="text" class="form-control" style=" width: 24% ;margin-left:5%; color:rgb(231, 236, 233); background-color:darkslategrey;" value="Field Number" readonly>
+            <input type="text" class="form-control" style=" width: 20% ;margin-left:5% ; color:rgb(231, 236, 233); background-color:darkslategrey" value="Field Value" readonly>
+        </div>
+    
+        <div id="add" class="form-group row" style="margin-left: 2%;">
+           
+        </div>
+        
+        <div class="form-group row">
+            <button type="button" id="remove-field" class="btn btn-danger" style="margin-left:60% ;">Remove </button>
+            <button type="button" id="add-field" class="btn btn-success" style="margin-left:3% ;">Add Field</button>
+        </div>
+        
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>   
+</form>
+    </div>
+    </div>
+
+        
+<%- include('partials/prefooter'); -%>  
+<script type="text/javascript" src="makeForm.js"></script>
+<%- include('partials/footer'); -%>  
+      

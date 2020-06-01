@@ -1,0 +1,43 @@
+<%- include('partials/header',{id:id}); -%>
+<div style=" width: 35% ;margin-left:32.5%; margin-top: 3%; background-color:rgb(96, 219, 207) ;">
+<div  class="shadow p-3 mb-5 rounded" >
+    <input id="formType" type="text" class="form-control" style="width: 45%;margin-left:28%; color:rgb(231, 236, 233); background-color:darkslategrey " value=<%= form%> readonly>
+</div>
+</div>
+<div class="row"> 
+<div class="col-sm-9">
+<div style="margin-top:1%; width: 45% ;margin-left:45%; background-color:rgb(141, 226, 218)">
+<div  class="shadow p-3 mb-5 rounded" >
+     
+        
+    <div class="form-group row" style="margin-left: 4%;"> 
+        <input type="text" class="form-control" style=" width: 41% ;margin-left:2% ;color:rgb(231, 236, 233); background-color:darkslategrey" value="Field Name" readonly>
+        <input type="text" class="form-control" style=" width: 42% ;margin-left:2.5% ;color:rgb(231, 236, 233); background-color:darkslategrey" value="Predicted field Value" readonly>
+    </div>
+        <% for(var i=0;i<data.length;i++){ %>
+         <div class="form-group row"> 
+        <input type="text" class="form-control"  style=" width: 40% ;margin-top:2%;margin-left:7%" value=<%-keys[i]%> readonly>
+       <input type="text" id=<%-i%> class="form-control"  style=" width: 40%; margin-top:2%;margin-left:3%" value=<%= data[i] %> required>
+    </div>
+       <% } %>
+    <form action="saveResult">
+        <%if(id!=null){%>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button> 
+        <%}%>
+    </form>  
+</div>
+</div>
+
+</div>     
+<div class="col-sm-2" style="width: 50%; margin-top: 10%; ">
+    <div  class="shadow p-3 mb-5 rounded" style="background-color:rgb(141, 226, 218)">
+    <p>Edit the predicted fields for any discripancy and press the 
+        <span class="text-info" style="background-color: white;padding: 2.5px; border-radius: 4pt;font-weight:400; ">Submit</span>
+         button finally to save the data, otherwise login to do the same
+         </p>
+</div>
+</div>    
+
+<%- include('partials/prefooter'); -%>  
+<script type="text/javascript" src="sendResult.js"></script>
+<%- include('partials/footer'); -%>

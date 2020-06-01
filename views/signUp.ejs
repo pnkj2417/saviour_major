@@ -1,0 +1,27 @@
+<%- include('partials/header',{id:id}); -%>
+  
+
+<div style=" width: 30% ;margin-left:32.5%; margin-top: 3%; background-color:rgb(96, 219, 207) ;">
+    <div  class="shadow p-3 mb-5 rounded" >
+        <form class="from-control row" method="post">
+            <input type="text"  class="form-control" style=" width: 41% ;margin-left:7% ; margin-bottom: 2%;color:rgb(231, 236, 233); background-color:darkslategrey" value="Secret Key" readonly>
+            <input type="text" id="key" name="key" class="form-control" style=" width: 42% ;margin-left:2.5% ;" required >
+
+            <input type="text"  class="form-control" style=" width: 41% ;margin-left:7% ;color:rgb(231, 236, 233); background-color:darkslategrey" value="Login Id" readonly>
+            <input type="text" id="id" name="id" class="form-control" style=" width: 42% ;margin-left:2.5% ;" required >
+    
+            <input type="text"  class="form-control" style=" width: 41% ;margin-left:7% ; margin-top: 2%;color:rgb(231, 236, 233); background-color:darkslategrey" value="Password" readonly>
+            <input type="password" id="pass" name="password" class="form-control" style=" width: 42% ;margin-left:2.5% ;margin-top: 2%;" required>
+
+            <input type="text" class="form-control" style=" width: 41% ;margin-left:7% ; margin-top: 2%;color:rgb(231, 236, 233); background-color:darkslategrey" value="Confirm Password" readonly>
+            <input type="password" id="pass1"class="form-control" style=" width: 42% ;margin-left:2.5% ;margin-top: 2%;" required>
+
+            <button type="submit" id="submit" class="btn btn-success" style="margin-left: 40%; margin-top: 2%;">Sign Up</button>
+        </form>
+    </div>
+    </div>
+
+<%- include('partials/prefooter'); -%>  
+<script type="text/javascript" src="signUp.js"></script>
+
+<%- include('partials/footer'); -%>
